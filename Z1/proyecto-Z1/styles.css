@@ -9,29 +9,45 @@
   src: url("Space-Grotesk/SpaceGrotesk-Medium.otf");
   font-weight: 500;
 }
-:root{
+
+:root {
   --black: #1F191A;
-  --red:#BD1C43;
-  --white:#FEFFFF;
-  --burgundy:#7C2D44;
+  --red: #BD1C43;
+  --white: #FEFFFF;
+  --burgundy: #7C2D44;
   --light_orange: #FAF4EF;
+  --dark-grey: #6D6D6D;
+  --deep_blue: #A9B2B5;
 
 }
 
-.mb-24{
+.mb-24 {
   margin-bottom: 1.5rem;
 }
 
-body{
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga","kern";
+  font-variant-numeric: proportional-nums;
+  }
+
+body {
   font-family: Space-Grotesk;
   font-weight: 400;
   color: var(--black);
   font-size: 16px;
 }
-h1,h2,h3,h4 {
+
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   font-weight: 500;
 }
+
 p {
   font-size: 1.125rem;
   margin: 0;
@@ -39,12 +55,14 @@ p {
 
 a {
   text-decoration: none;
-color: var(--black);
+  color: var(--black);
 }
 
-div,header {
+div,
+header {
   box-sizing: border-box;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -55,15 +73,15 @@ header {
 }
 
 nav {
-  
+
   font-size: 1rem;
-  
+
 }
 
 nav ul {
   list-style: none;
   margin: 0;
-  padding:0;
+  padding: 0;
 
 }
 
@@ -74,32 +92,36 @@ nav li {
 
 .folder {
 
-  background-image: url("Home-Folder.png");
-  max-width: 82.5rem; /* No usar height que se te salen las letras del div*/
+  background-image: url("assets/Home-Folder.png");
+  max-width: 82.5rem;
+  /* No usar height que se te salen las letras del div*/
   margin: 0 auto 8rem;
   padding: 9.375rem 0 9.4375rem 5rem;
   color: var(--white);
- 
+
 
 
 }
-.folder_content{
-  max-width: 572px;
+
+.folder_content {
+  max-width: 35.75rem;
 }
 
 .folder_title {
-font-size: 4.25rem;
-font-weight: 500;
-margin-bottom: 28px;
-line-height: 120%;
+  font-size: 4.25rem;
+  font-weight: 500;
+  margin-bottom: 28px;
+  line-height: 120%;
 }
 
 .folder_p {
-  font-size: 1.375rem; /* el font-weight standar es 400 */
+  font-size: 1.375rem;
+  /* el font-weight standar es 400 */
   margin-bottom: 2.5rem;
   line-height: 150%;
 
 }
+
 .button {
   font-family: Space-Grotesk;
   font-size: 1rem;
@@ -112,10 +134,10 @@ line-height: 120%;
 
   border: none;
   border-radius: 0.25rem;
-  
+
 }
 
-h2{
+h2 {
   font-size: 3rem;
   font-weight: 500;
 }
@@ -132,7 +154,7 @@ h2{
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.08em;
-  color:var(--burgundy);
+  color: var(--burgundy);
   line-height: 1.225rem;
 
   margin-bottom: 1.5rem;
@@ -146,12 +168,12 @@ h2{
 }
 
 .container_cards {
-margin: 0 auto 8rem;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 2rem;
-max-width: 76rem;
-color: var(--white);
+  margin: 0 auto 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 76rem;
+  color: var(--white);
 
 }
 
@@ -159,6 +181,7 @@ h3 {
   font-size: 1.5rem;
   line-height: 2.1rem;
 }
+
 .card {
   background-color: #BD1C43;
   padding: 2.5rem;
@@ -173,9 +196,184 @@ h3 {
 /*Section about us*/
 
 .section_about_us {
-  margin: 0 3.75rem 8rem;
+  margin: 0 auto 8rem;
   padding: 5rem;
 
   background-color: var(--light_orange);
+  background-image: url(assets/Vector-2.svg), url(assets/Vector-1.svg);
+  background-repeat: no-repeat;
+  background-position: 52.87% 100%, 26.97% 0%;
+  display: flex;
+  gap: 6.75rem;
+  max-width: 82.5rem;
 
+
+}
+
+
+#title_about_us {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 120%;
+
+}
+
+
+#section_about_us_p {
+  line-height: 160%;
+  margin-bottom: 3.25rem;
+}
+
+.button_more_about_us {
+  font-family: Space-Grotesk;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: .02rem;
+  color: var(--red);
+  border: none;
+  background-color: var(--light_orange);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.section_press {
+  max-width: 76rem;
+  margin: 0 auto 8rem;
+}
+
+.section_press_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.button_see_all {
+  font-family: Space-Grotesk;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: .02rem;
+  color: var(--red);
+  border: none;
+  background-color: var(--white);
+  margin-right: 0;
+  padding: 0;
+}
+
+.container_press_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.press_card {
+  background-color: var(--light_orange);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.press_card_title {
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--burgundy);
+  letter-spacing: 0.08rem;
+  line-height: 120%;
+  margin-bottom: 1rem;
+}
+
+.press_card_p {
+  font-size: 1.375rem;
+  line-height: 150%;
+  color: var(--black);
+
+  margin-bottom: 1rem;
+}
+
+.press_card_date {
+  color: var(--dark-grey);
+  font-size: .875rem;
+  line-height: 160%;
+
+  margin-bottom: 4rem;
+}
+
+.read_more_button {
+  margin-top: auto;
+}
+
+footer {
+  background-color: var(--black);
+  padding: 6.25rem 7rem 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 76rem;
+}
+
+.logo {
+  color: var(--white);
+}
+
+.footer_top {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  
+  margin-left: 3.125rem;
+  margin-bottom: 9.875rem;
+}
+
+.footer_nav {
+  color: var(--white);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer_nav li {
+  display: block;
+}
+
+
+.footer_link {
+  color: var(--white);
+  font-size: .875rem;
+  line-height: 1.4rem;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+.footer_link_title {
+  font-size: .875rem;
+  color: #AEAEAE;
+}
+
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  color: #FEFFFF;
+  opacity: 70%;
+  font-size: .8125rem;
+  line-height: 1.1375rem;
+  max-width: 76rem;
+}
+
+.copyright_p {
+  font-size: .8125rem;
+  line-height: 140%;
+  color: var(--deep_blue);
+}
+
+.privacy_policy {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 70%;
+  line-height: 140%;
+}
+
+.point_privacy_policy {
+  color: var(--deep_blue);
+  font-size: .8125rem;
+  line-height: 140%;
 }
